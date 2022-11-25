@@ -39,5 +39,4 @@ public class ContactPersonDetails {
 		return "Added Person Details  \nFirstName : "+firstName+" "+lastName+"\nAddress : "+address+"\nPhone Number : "+phoneNumber+"\nEmail : "+email;
 	}
 	
-
 }
