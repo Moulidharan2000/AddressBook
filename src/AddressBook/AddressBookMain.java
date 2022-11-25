@@ -53,6 +53,7 @@ public class AddressBookMain {
         addressBook.operation();
         addressBook.addContact();
         addressBook.editPerson();
+        addressBook.deletePerson();
         addressBook.displayContents();
        
         

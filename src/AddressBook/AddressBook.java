@@ -134,6 +134,22 @@ public class AddressBook {
         }
 
     }
+    public void deletePerson() {
+
+        System.out.println("Enter the first name of the person to be deleted");
+        String firstName = scannerObject.next();
+        Iterator<ContactPersonDetails> iterator = contactList.listIterator();
+        while(iterator.hasNext()) {
+
+            ContactPersonDetails person = iterator.next();
+
+            if(firstName.equals(person.getFirstName())) {
+                contactList.remove(person);
+                return;
+            }
+        }
+    }
+
     public void displayContents() {
 
         Iterator<ContactPersonDetails> iterator = contactList.iterator();
