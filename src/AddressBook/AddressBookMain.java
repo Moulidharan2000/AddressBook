@@ -7,7 +7,7 @@ public class AddressBookMain {
     
 
 	@SuppressWarnings("unused")
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		// TODO Auto-generated method stub
 		ContactPersonDetails person = new ContactPersonDetails();
 		Address address = new Address();
@@ -29,19 +29,19 @@ public class AddressBookMain {
         System.out.print("Enter State : ");
         String state = scannerObject.next();
 
+        System.out.print("Enter Zip Code: ");
+        long zipCode = scannerObject.nextLong();
+        
         System.out.print("Enter Phone Number : ");
         long phoneNumber = scannerObject.nextLong();
 
         System.out.print("Enter Email : ");
         String email = scannerObject.next();
         
-        System.out.print("Enter Zip Code : ");
-        long zipCode = scannerObject.nextLong();
-
         scannerObject.close();
 
         person1.setFirstName(firstName);
-        person1.setLasteName(lastName);
+        person1.setLastName(lastName);
         person1.setphoneNumber(phoneNumber);
         person1.setEmail(email);
         address1.setCity(city);
@@ -50,8 +50,11 @@ public class AddressBookMain {
         person1.setAddress(address1);
 
         AddressBook addressBook = new AddressBook();
-        addressBook.addContacts(person1);
+        addressBook.operation();
+        addressBook.addContact();
+        addressBook.editPerson();
         addressBook.displayContents();
+       
         
 	}
 

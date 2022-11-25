@@ -25,7 +25,7 @@ public class Address {
 	}
 	
 	public String toString() {
-		return city+", "+state+", "+zipCode;
+		return city+", "+state+", "+zipCode+".";
 	}
 
 }

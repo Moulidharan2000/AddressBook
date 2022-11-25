@@ -23,17 +23,17 @@ public class ContactPersonDetails {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public void setLasteName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	public void setphoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public void setAddress(Address address) {
-		this.address = address;
 	}
 	public String toString() {
 		return "Added Person Details  \nFirstName : "+firstName+" "+lastName+"\nAddress : "+address+"\nPhone Number : "+phoneNumber+"\nEmail : "+email;
