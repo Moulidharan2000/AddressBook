@@ -3,7 +3,7 @@ package AddressBook;
 public class Address {
 	
 	public String city, state;
-	public int zipCode;
+	public long zipCode;
 	
 	public String getCity() {
 		return city;
@@ -11,7 +11,7 @@ public class Address {
 	public String getState() {
 		return state;
 	}
-	public int getZipCode() {
+	public long getZipCode() {
 		return zipCode;
 	}
 	public void setCity(String city) {
@@ -20,12 +20,12 @@ public class Address {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public void setZipCode(int zipCode) {
-		this.zipCode = zipCode;
+	public void setZipCode(long zipCode2) {
+		this.zipCode = zipCode2;
 	}
 	
 	public String toString() {
-		return "\nCity : "+city+"\nState : "+state+"\nPostal Code : "+zipCode;
+		return city+", "+state+", "+zipCode;
 	}
 
 }

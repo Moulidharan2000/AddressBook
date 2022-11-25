@@ -11,19 +11,19 @@ public class ContactPersonDetails {
 	public String getLastName() {
 		return lastName;
 	}
+	public Address getaddress() {
+		return address;
+	}
 	public long phoneNumber() {
 		return phoneNumber;
 	}
 	public String getEmail() {
 		return email;
 	}
-	public Address getaddress() {
-		return address;
-	}
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public void setLastename(String lastName) {
+	public void setLasteName(String lastName) {
 		this.lastName = lastName;
 	}
 	public void setphoneNumber(long phoneNumber) {
@@ -36,7 +36,7 @@ public class ContactPersonDetails {
 		this.address = address;
 	}
 	public String toString() {
-		return "Person Details : \nFirstName : \n"+firstName+" "+lastName+"\nAddress : "+address+"\nPhone Number : "+phoneNumber+"\nEmail : "+email;
+		return "Added Person Details  \nFirstName : "+firstName+" "+lastName+"\nAddress : "+address+"\nPhone Number : "+phoneNumber+"\nEmail : "+email;
 	}
 	
 
