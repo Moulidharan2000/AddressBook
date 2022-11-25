@@ -3,19 +3,20 @@ package AddressBook;
 import java.util.Scanner;
 
 public class AddressBook {
-	private final int NUM_OF_PEOPLE = 5;//declare operation
-    Scanner scannerObject = new Scanner(System.in);//input
+	private final int NUM_OF_PEOPLE = 5;
+    public String addressBookName;
     ContactPersonDetails[]contactList = new ContactPersonDetails[NUM_OF_PEOPLE];//arry to no of1 person datail
     public static int numberOfEntries = 0;//intilizing
-
+    Scanner scannerObject = new Scanner(System.in);
     public void operation() {
+    	 
 
         boolean moreChanges = true;
         do{
 
             System.out.println("\nChoose the operation you want to perform");
             System.out.println("1.Add To Address Book\n2.Edit Existing Entry\n3.Display Address book\n4.Delete Contact\n5.Exit Address book System");
-
+            System.out.print("Enter the Option Number : ");
             switch (scannerObject.nextInt()) {
                 case 1:
                     addContact();
@@ -35,12 +36,14 @@ public class AddressBook {
 
 
             }
+           
 
         }while(moreChanges);
     }
+    	
 
     public void addContact() {
-        System.out.println("Enter number of people you want to add to Addres book");
+        System.out.print("Enter number of people you want to add to Addres book : ");
         int numberOfPeople = scannerObject.nextInt();
         int endIterator = numberOfPeople+numberOfEntries;
 
@@ -55,27 +58,27 @@ public class AddressBook {
 
                 ContactPersonDetails person = new ContactPersonDetails();
                 Address address = new Address();
-                System.out.println("Enter the details of Person "+(index+1));
+                System.out.print("Enter the details of Person "+(index+1)+"\n");
 
-                System.out.println("Enter First Name: ");
+                System.out.print("Enter First Name : ");
                 String firstName = scannerObject.next();
 
-                System.out.println("Enter Last Name: ");
+                System.out.print("Enter Last Name: ");
                 String lastName = scannerObject.next();
 
-                System.out.println("Enter City: ");
+                System.out.print("Enter City: ");
                 String city = scannerObject.next();
 
-                System.out.println("Enter State: ");
+                System.out.print("Enter State: ");
                 String state = scannerObject.next();
 
-                System.out.println("Enter Zip Code: ");
+                System.out.print("Enter Zip Code: ");
                 long zipCode = scannerObject.nextLong();
                 
-                System.out.println("Enter Phone Number: ");
+                System.out.print("Enter Phone Number: ");
                 long phoneNumber = scannerObject.nextLong();
 
-                System.out.println("Enter Email: ");
+                System.out.print("Enter Email: ");
                 String email = scannerObject.next();
 
                 person.setFirstName(firstName);
@@ -97,7 +100,7 @@ public class AddressBook {
 
     public void editPerson() {
 
-        System.out.println("Enter the first name:");
+        System.out.print("Enter the first name:");
         String firstName = scannerObject.next();
 
         for(int index = 0; index <numberOfEntries; index++) {
@@ -179,11 +182,12 @@ public class AddressBook {
 
     public void displayContents() {
         System.out.println("----- Contents of the Address Book -----");
-        for(int index=0; index < numberOfEntries ; index++) {
+        for(int index=0; index < numberOfEntries  ; index++) {
             System.out.println(contactList[index]);
 
         }
-        System.out.println("-----------------------------------------");
-
+        
     }
+
+
 }
