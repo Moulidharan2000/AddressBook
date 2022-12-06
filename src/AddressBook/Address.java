@@ -20,8 +20,8 @@ public class Address {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public void setZipCode(long zipCode2) {
-		this.zipCode = zipCode2;
+	public void setZipCode(long zipCode) {
+		this.zipCode = zipCode;
 	}
 	
 	public String toString() {
