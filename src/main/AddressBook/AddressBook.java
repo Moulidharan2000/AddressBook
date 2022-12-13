@@ -1,4 +1,4 @@
-public class AddressBook {
+public class AddressBook implements AddressBookIF {
     Scanner scannerObject = new Scanner(System.in);
     public Map<String, ContactPerson> contactList = new HashMap<String,ContactPerson>();
     public static HashMap<String, ArrayList<ContactPerson>> personByCity  = new HashMap<String, ArrayList<ContactPerson>>();

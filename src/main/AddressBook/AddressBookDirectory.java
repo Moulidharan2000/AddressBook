@@ -1,4 +1,4 @@
-public class AddressBookDirectory {
+public class AddressBookDirectory implements AddressBookDirectoryIF {
     public AddressBook addressBook;
     Scanner scannerObject = new Scanner(System.in);
     Map<String,AddressBook> addressBookDirectory = new HashMap<String,AddressBook>();

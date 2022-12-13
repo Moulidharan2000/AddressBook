@@ -1,4 +1,4 @@
-public class AddressBookIF {
+public interface AddressBookIF {
     void operation();
     void addContact();
     void deletePerson();
